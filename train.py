@@ -211,12 +211,12 @@ class LayerNormNet(nn.Module):
 # =========================
 def parse_args():
     parser = argparse.ArgumentParser(description="Standalone training script for only_duibi mode.")
-    parser.add_argument("--type", "-type", dest="type", type=str, default='AIP',
-                        choices=['AMP', 'AIP'], help="AMP or AIP")
+    parser.add_argument("--type", "-type", dest="type", type=str, default='AMP'
+                    )
     parser.add_argument("--train_fasta", "-train_fasta", dest='train_fasta', type=str, default='train.txt')
     parser.add_argument("--valid_fasta", "-valid_fasta", dest='valid_fasta', type=str, default='valid.txt')
     parser.add_argument("--test_fasta", "-test_fasta", dest='test_fasta', type=str, default='test.txt')
-    parser.add_argument("--hidden", "-hidden", dest='hidden', type=int, default=1024)
+    parser.add_argument("--hidden", "-hidden", dest='hidden', type=int, default=256)
     parser.add_argument("--drop", "-drop", dest='drop', type=float, default=0.5)
     parser.add_argument("--n_transformer", "-n_transformer", dest='n_transformer', type=int, default=1)
     parser.add_argument("--lr", "-lr", dest='lr', type=float, default=0.0001)
